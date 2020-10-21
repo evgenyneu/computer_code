@@ -1,24 +1,30 @@
-# README
+# This is computer code 💻
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
 
-Things you may want to cover:
+* Ruby 2.7.1
 
-* Ruby version
+* PostgreSQL 13.0
 
-* System dependencies
+* Node 12.18.3
 
-* Configuration
+* Yarn 1.22.10
 
-* Database creation
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+```
+git clone https://github.com/evgenyneu/computer_code.git
+cd computer_code
+bundle
+yarn install
+rails db:create db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Run local web server
 
-* Deployment instructions
+```
+rails server
+```
 
-* ...
+Open web site [http://127.0.0.1:3000](http://127.0.0.1:3000).
