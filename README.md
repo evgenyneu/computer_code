@@ -1,6 +1,6 @@
 # This is computer code 💻
 
-This is a code for this site: [https://iiquiz.herokuapp.com/](https://iiquiz.herokuapp.com/).
+This is a code of this web site: [https://iiquiz.herokuapp.com/](https://iiquiz.herokuapp.com/).
 
 ## Prerequisites
 
