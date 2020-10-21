@@ -9,15 +9,15 @@ class FriendsController < ApplicationController
   end
 
   def create
-    friend_email = params[:friend][:email]
+    @friend = Friend.new(email: params[:friend][:email])
 
-    if friend_email.blank?
+    if @friend.email.blank?
       flash.now.alert = 'Please enter email'
       render 'new'
       return
     end
 
-    user = User.find_by_email(friend_email)
+    user = User.find_by_email(@friend.email)
 
     if user.nil?
       flash.now.alert = 'User does not exist'
