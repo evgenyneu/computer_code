@@ -2,6 +2,8 @@
 
 This is the code of this web site: [https://iiquiz.herokuapp.com/](https://iiquiz.herokuapp.com/).
 
+Watch [demo video](https://drive.google.com/file/d/1YFDaAp2adz1tD5hCtT1m2EzHqWncRVdw/view?usp=sharing).
+
 ## Prerequisites
 
 * Ruby 2.7.1
