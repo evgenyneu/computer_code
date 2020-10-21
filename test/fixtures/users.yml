@@ -1,0 +1,14 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  password_digest: MyString
+  word: hello
+  auth_token: j2j12k3
+
+
+two:
+  email: MyString
+  password_digest: MyString
+  word: hi_there
+  auth_token: dsh23j32

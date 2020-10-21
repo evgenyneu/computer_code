@@ -1,0 +1,27 @@
+<div class="flex justify-center">
+  <div class="w-full max-w-xs">
+    <h1 class="px-8">Log In</h1>
+    <%= form_tag sessions_path, class: "bg-white shadow-md rounded px-8 pt-6 pb-6 mb-4" do %>
+      <div class="mb-4">
+        <%= label_tag :email, nil, class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= text_field_tag :email, params[:email], type: "email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: 'Email' %>
+      </div>
+      <div class="mb-6">
+        <%= label_tag :password, nil, class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= password_field_tag :password, params[:password], class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "******************" %>
+      </div>
+
+      <div class="flex justify-center">
+        <%= submit_tag "Log In", class: "cursor-pointer bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="flex justify-center">
+  <div class="w-full max-w-xs text-center">
+
+    New user?
+    <%= link_to "Sign Up", new_user_path, class: 'font-bold text-green-700 hover:text-green-500' %>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tests</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'mocha', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'test/main' %>
+  </head>
+
+  <body>
+    <div id="mocha"></div>
+    <div class="TestFixture"></div>
+
+    <%= yield %>
+
+    <%= javascript_pack_tag 'test/setup', type: 'module' %>
+    <%= javascript_pack_tag 'run_tests', type: 'module' %>
+  </body>
+</html>

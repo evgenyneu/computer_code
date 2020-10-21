@@ -1,0 +1,45 @@
+
+
+<% if @user.errors.any? %>
+  <div class="bg-red-100 border-l-4 border-red-500 text-red-700 px-8 py-5 mb-4" role="alert">
+    <h2>Form is invalid</h2>
+
+    <ul class="list-disc">
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    <ul>
+  </div>
+<% end %>
+
+<%= form_with model: @user, local: true, class: "bg-white shadow-md rounded px-8 pt-6 pb-6 mb-4" do |f| %>
+  <div class="mb-4">
+    <%= f.label :email, nil, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :email, type: "email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: 'Email' %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :password, nil, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.password_field :password, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: '*************' %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :password_confirmation, nil, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.password_field :password_confirmation, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: '*************' %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :word, nil, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :word, class: "Quiz-wordInput shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: 'Your word' %>
+  </div>
+
+  <div class="flex justify-center mb-4">
+    <span class="Quiz-wordScore text-lg rounded-full text-green-700 border-2 border-green-600 uppercase px-2 py-1 font-bold">Success</span>
+  </div>
+
+  <div class="flex justify-center">
+    <%= f.submit (@user.id? ? 'Save' : 'Sign Up'), class: "cursor-pointer bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+  </div>
+<% end %>
+
+<%= javascript_pack_tag 'word_counter/init.js', 'data-turbolinks-track': 'reload' %>
