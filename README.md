@@ -1,4 +1,4 @@
-# This is computer code 💻
+# This is computer code
 
 This is the code of this web site: [https://iiquiz.herokuapp.com/](https://iiquiz.herokuapp.com/).
 
